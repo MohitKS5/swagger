@@ -1,0 +1,220 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "HAR Imported API",
+    "description": "TODO: Add Description",
+    "contact": {}
+  },
+  "host": "localhost:8080",
+  "basePath": "/api/org_1/auth/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/student/logout": {
+      "post": {
+        "description": "logout",
+        "summary": "StudentLogout_POST",
+        "operationId": "StudentLogoutPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/faculty/signup": {
+      "post": {
+        "description": "signup",
+        "summary": "FacultySignup_POST",
+        "operationId": "FacultySignupPost",
+        "deprecated": false,
+        "produces": [
+          "text/plain; charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {
+              "text/plain; charset=utf-8": "{\"id\":\"a3c15cb0-25d6-47df-855a-cc6fbdcc4d44\",\"name\":\"\",\"username\":\"mohitks2\",\"mobile\":\"\",\"address_id\":\"08c36fb9-c517-401f-8891-be270237d7a8\",\"address\":{\"id\":\"08c36fb9-c517-401f-8891-be270237d7a8\",\"flat_number\":\"\",\"locality\":\"\",\"landmark\":\"\",\"city\":\"\",\"state\":\"\",\"pincode\":0}}\n"
+            },
+            "headers": {
+              "Set-Cookie": {
+                "type": "string",
+                "default": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJhM2MxNWNiMC0yNWQ2LTQ3ZGYtODU1YS1jYzZmYmRjYzRkNDQiLCJ0eXAiOiJmYWN1bHR5IiwiZXhwIjoxNTY5NDIwMzY0fQ.dnV-YEkzcLgbxw59e_tlp7k80H4RrC5SIzD9bNkvkMI; Path=/; Max-Age=86400"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Tue, 24 Sep 2019 14:06:04 GMT"
+              },
+              "Content-Length": {
+                "type": "string",
+                "default": "276"
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/faculty/login": {
+      "post": {
+        "description": "login",
+        "summary": "FacultyLogin_POST",
+        "operationId": "FacultyLoginPost",
+        "deprecated": false,
+        "produces": [
+          "text/plain; charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {
+              "text/plain; charset=utf-8": "{\"id\":\"a3c15cb0-25d6-47df-855a-cc6fbdcc4d44\",\"name\":\"Hritvik Tneja\",\"username\":\"mohitks2\",\"mobile\":\"9234782514\",\"address_id\":\"08c36fb9-c517-401f-8891-be270237d7a8\",\"address\":{\"id\":\"08c36fb9-c517-401f-8891-be270237d7a8\",\"flat_number\":\"567\",\"locality\":\"PLA\",\"landmark\":\"Near Town Park\",\"city\":\"Hisar\",\"state\":\"Haryana\",\"pincode\":125001}}\n"
+            },
+            "headers": {
+              "Set-Cookie": {
+                "type": "string",
+                "default": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJhM2MxNWNiMC0yNWQ2LTQ3ZGYtODU1YS1jYzZmYmRjYzRkNDQiLCJ0eXAiOiJmYWN1bHR5IiwiZXhwIjoxNTY5NDIzMDM4fQ.c2qaXHTRO6RFUmWe2MTWm-KhieMN2wX0sAc5vDM9Y-0; Path=/; Max-Age=86400"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Tue, 24 Sep 2019 14:50:38 GMT"
+              },
+              "Content-Length": {
+                "type": "string",
+                "default": "336"
+              }
+            }
+          }
+        },
+        "security": []
+      },
+      "put": {
+        "description": "udpate profile",
+        "summary": "FacultyLogin_PUT",
+        "operationId": "FacultyLoginPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          },
+          "401": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            },
+            "examples": {
+              "application/json": {
+                "errcode": "E_MISSING_TOKEN",
+                "error": "No token found!"
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "definitions": {
+    "ErrorResponse": {
+      "title": "ErrorResponse",
+      "example": {
+        "errcode": "E_MISSING_TOKEN",
+        "error": "No token found!"
+      },
+      "type": "object",
+      "properties": {
+        "errcode": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "errcode",
+        "error"
+      ]
+    }
+  },
+  "tags": []
+}
