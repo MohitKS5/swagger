@@ -1,0 +1,180 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: edtech_server
+  description: ''
+  contact: {}
+host: localhost:8080
+basePath: /api/org_1/auth/student
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /logout:
+    post:
+      description: ''
+      summary: logout
+      tags:
+      - auth
+      operationId: LogoutPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          headers: {}
+  /signup:
+    post:
+      description: ''
+      summary: signup
+      tags:
+      - auth
+      operationId: SignupPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/signupRequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          headers: {}
+  /login:
+    post:
+      description: ''
+      summary: login
+      tags:
+      - auth
+      operationId: LoginPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/loginRequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          headers: {}
+    put:
+      description: ''
+      summary: udpate profile
+      tags:
+      - auth
+      operationId: LoginPut
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/udpateprofileRequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          headers: {}
+definitions:
+  signupRequest:
+    title: signupRequest
+    example:
+      username: mohitks2
+      password: qwerty
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+    required:
+    - username
+    - password
+  loginRequest:
+    title: loginRequest
+    example:
+      username: mohitks2
+      password: qwerty
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+    required:
+    - username
+    - password
+  udpateprofileRequest:
+    title: udpateprofileRequest
+    example:
+      id: a3c15cb0-25d6-47df-855a-cc6fbdcc4d44
+      name: Hritvik Tneja
+      mobile: 9234782514
+      address_id: 08c36fb9-c517-401f-8891-be270237d7a8
+      address:
+        id: 08c36fb9-c517-401f-8891-be270237d7a8
+        flat_number: 567
+        locality: PLA
+        landmark: Near Town Park
+        city: Hisar
+        state: Haryana
+        pincode: 125001
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      mobile:
+        type: string
+      address_id:
+        type: string
+      address:
+        type: object
+    required:
+    - id
+    - name
+    - mobile
+    - address_id
+    - address
+tags:
+- name: auth
+  description: ''
